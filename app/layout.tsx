@@ -14,8 +14,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <MainNav />
-        {children}
+        <nav className='flex flex-col items-center border-b mb-5 px-5 py-3'>
+          <div className='max-w-6xl w-full'>
+            <MainNav />
+          </div>
+        </nav>
+        <main className='flex flex-col items-center border-b'>
+          <div className='max-w-6xl w-full'>{children}</div>
+        </main>
       </body>
     </html>
   );
