@@ -680,11 +680,11 @@ video {
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
 }
-.text-secondary-foreground {
-  color: hsl(var(--secondary-foreground));
-}
 .text-primary\/70 {
   color: hsl(var(--primary) / 0.7);
+}
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
