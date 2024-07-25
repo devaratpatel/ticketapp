@@ -568,14 +568,26 @@ video {
 .static {
   position: static;
 }
+.relative {
+  position: relative;
+}
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
 }
 .flex {
   display: flex;
 }
 .inline-flex {
   display: inline-flex;
+}
+.table {
+  display: table;
 }
 .h-10 {
   height: 2.5rem;
@@ -586,6 +598,9 @@ video {
 .h-9 {
   height: 2.25rem;
 }
+.h-12 {
+  height: 3rem;
+}
 .w-10 {
   width: 2.5rem;
 }
@@ -594,6 +609,9 @@ video {
 }
 .max-w-6xl {
   max-width: 72rem;
+}
+.caption-bottom {
+  caption-side: bottom;
 }
 .cursor-default {
   cursor: default;
@@ -613,6 +631,9 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -624,6 +645,9 @@ video {
 }
 .border-b {
   border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
 }
 .border-input {
   border-color: hsl(var(--input));
@@ -639,6 +663,12 @@ video {
 }
 .bg-secondary {
   background-color: hsl(var(--secondary));
+}
+.bg-muted\/50 {
+  background-color: hsl(var(--muted) / 0.5);
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -664,6 +694,12 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.text-left {
+  text-align: left;
+}
+.align-middle {
+  vertical-align: middle;
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -685,6 +721,9 @@ video {
 }
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
@@ -735,6 +774,10 @@ video {
   background-color: hsl(var(--secondary) / 0.8);
 }
 
+.hover\:bg-muted\/50:hover {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
 .hover\:text-accent-foreground:hover {
   color: hsl(var(--accent-foreground));
 }
@@ -776,6 +819,33 @@ video {
 
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
+}
+
+.data-\[state\=selected\]\:bg-muted[data-state=selected] {
+  background-color: hsl(var(--muted));
+}
+
+@media (min-width: 640px) {
+
+  .sm\:border {
+    border-width: 1px;
+  }
+}
+
+.\[\&\:has\(\[role\=checkbox\]\)\]\:pr-0:has([role=checkbox]) {
+  padding-right: 0px;
+}
+
+.\[\&\>tr\]\:last\:border-b-0:last-child>tr {
+  border-bottom-width: 0px;
+}
+
+.\[\&_tr\:last-child\]\:border-0 tr:last-child {
+  border-width: 0px;
+}
+
+.\[\&_tr\]\:border-b tr {
+  border-bottom-width: 1px;
 }
 
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
