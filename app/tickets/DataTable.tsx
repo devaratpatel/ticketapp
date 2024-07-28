@@ -1,3 +1,4 @@
+import TicketStatusBadge from '@/components/TicketStatusBadge';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table';
 import { Ticket } from '@prisma/client';
 import React from 'react';
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const DataTable = ({ tickets }: Props) => {
-  console.log('hello world');
+  console.log(tickets);
   return (
     <div className='w-full mt-5'>
       <div className='rounded-md sm:border'>
@@ -15,7 +16,9 @@ const DataTable = ({ tickets }: Props) => {
           <TableHeader>
             <TableRow>
               <TableHead>Title</TableHead>
-              <TableHead>Status</TableHead>
+              <TableHead>
+                <div className='flex justify-center'>Status</div>
+              </TableHead>
               <TableHead>Priority</TableHead>
               <TableHead>CreatedAt</TableHead>
             </TableRow>
@@ -25,7 +28,11 @@ const DataTable = ({ tickets }: Props) => {
               ? tickets.map((ticket) => (
                   <TableRow key={ticket.id} data-href='/'>
                     <TableCell>{ticket.title}</TableCell>
-                    <TableCell>{ticket.status}</TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <TicketStatusBadge status={ticket.status}></TicketStatusBadge>
+                      </div>
+                    </TableCell>
                     <TableCell>{ticket.priority}</TableCell>
                     <TableCell>
                       {ticket.createdAt.toLocaleDateString('en-US', {
