@@ -565,6 +565,9 @@ video {
 .navbar-link:hover {
   color: hsl(var(--primary));
 }
+.static {
+  position: static;
+}
 .relative {
   position: relative;
 }
@@ -745,6 +748,9 @@ video {
 .font-semibold {
   font-weight: 600;
 }
+.text-background {
+  color: hsl(var(--background));
+}
 .text-destructive-foreground {
   color: hsl(var(--destructive-foreground));
 }
@@ -766,8 +772,12 @@ video {
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
 }
-.text-background {
-  color: hsl(var(--background));
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+.text-muted {
+  color: hsl(var(--muted));
 }
 .underline-offset-4 {
   text-underline-offset: 4px;

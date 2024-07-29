@@ -27,7 +27,7 @@ enum  Status {
   CLOSED
 }
 enum Priority {
-  Low
+  LOW
   MEDIUM
   HIGH
 }
